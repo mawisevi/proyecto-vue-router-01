@@ -27,9 +27,10 @@ getData("https://api.thecatapi.com/v1/breeds");
 <template>
     <h1>Gatos</h1>
     <p v-if="loading">Cargando...</p>
+    <div class="alert alert-danger mt-2" v-if="error">{{ error }}</div>
     <div v-if="data">
-        <ul>
-            <li v-for="cat in data">
+        <ul class="list-group">
+            <li v-for="cat in data" class="list-group-item">
                 <router-link :to="`/gatos/${cat.name}`">
                     {{ cat.name }} </router-link>
             </li>

@@ -11,9 +11,21 @@ import { RouterLink, RouterView } from 'vue-router'
           CatAPI
         </router-link>
         <div>
-          <router-link class="btn btn-outline-light" to="/">Home</router-link>
+          <router-link 
+          active-class="active"
+          class="btn btn-outline-light me-2" 
+          to="/"
+          >Home</router-link>
 
-          <router-link class="btn btn-outline-light" to="/gatos">Gatos</router-link>
+          <router-link active-class="active"
+          class="btn btn-outline-light me-2" 
+          to="/gatos"
+          >Gatos</router-link>
+
+          <router-link active-class="active"
+          class="btn btn-outline-light" 
+          to="/favoritos"
+          >Favoritos</router-link>
         </div>
       </div>
     </nav>
